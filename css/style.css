@@ -1,0 +1,230 @@
+body {
+    margin: 0;
+    background-color: #F5F6F6;
+}
+
+* {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.searchbar { grid-area: search; }
+.banner { grid-area: banner; }
+.content { grid-area: content; }
+.footer { grid-area: footer; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'nav'
+        'header'
+        'search'
+        'banner'
+        'content'
+        'footer';
+    grid-template-rows: 
+        40px    /*nav*/
+        100px   /*header*/
+        auto    /*search*/
+        auto    /*banner*/
+        1fr     /*content*/
+        100px   /*footer*/
+}
+
+p {
+    margin: 0;
+}
+
+nav {
+    background-color: #E6E6E6;
+}
+
+nav a{
+    display: inline-block;
+    text-decoration: none;
+    color: #676767;
+    line-height: 20px;
+    padding: 10px;
+}
+
+.active{
+    color: #005B9B;
+}
+
+.banner {
+    margin-top: 15px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.banner img{
+    width: 100%;
+}
+
+.logo {
+    width: 50%;
+    margin: 25px auto;
+    text-align: center;
+}
+.logo img {
+    width: 150px;
+}
+
+.searchbar {
+    background-color: #676767;
+}
+
+.googlesearch {
+    margin-right: 15px;
+    float: right;
+    width: 75%;
+}
+
+.gsc-control-cse {
+    padding: 5px !important;
+}
+
+.portrait, .pdf {
+    display: block;
+    height: auto;
+    width: 200px;
+    margin: 15px auto;
+}
+
+.contenttxt, .infotxt {
+    margin: 15px;
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+footer {
+    background-color: #E6E6E6;
+    border-top: 1px solid #C2C2C2;
+}
+
+.contacts {
+    padding: 15px;
+    background-color:#868686;
+    height: 80px;
+    margin-top: 20px;
+}
+
+.error {
+    color: rgb(179, 0, 0);
+}
+
+.contact_form {
+    padding: 15px;
+    margin: 15px;
+    border-radius: 15px;
+    background-image: url(../images/contact_background.gif);
+    background-repeat:no-repeat;
+    background-size:cover;    
+}
+
+input[type=submit] {
+    display: block;
+    margin: 10px auto;
+    background: none;
+    padding: 2px 15px; 
+    border: 1px solid black;
+    cursor:pointer;
+}
+
+figcaption {
+    text-align: center;
+}
+
+address {
+    margin: 50px 15px;
+}
+
+.hidden {
+    visibility: hidden;
+    height: 10px;
+}
+
+.successtxt {
+    font-size: 20px;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 15px;
+    background-image: url(../images/contact_background.gif);
+    background-repeat:no-repeat;
+    background-size:cover;    
+}
+
+@media only screen and (min-device-width : 600px){
+
+.grid-container {
+    grid-template-rows: 
+        40px    /*nav*/
+        100px   /*header*/
+        auto    /*search*/
+        auto   /*banner*/
+        1fr     /*content*/
+        100px   /*footer*/
+}
+
+.googlesearch {
+    width: 50%;
+}
+
+.banner, .content {
+    width: 600px;
+    margin: 15px auto;
+}
+
+.contenttxt, .infotxt {
+    margin: 0;
+}
+
+.leftcert {
+    margin-top: 50px;
+    float: left;
+    width: 50%;
+}
+
+.rightcert {
+    margin-top: 50px;
+    float: right;
+    width: 50%;
+}
+
+}
+
+@media only screen and (min-device-width : 900px){
+
+.googlesearch {
+    width: 40%;
+}
+
+.portrait {
+    box-sizing: border-box;
+    float: left;
+    width: 22%;
+    margin: 0;
+}
+
+.infotxt {
+    box-sizing: border-box;
+    float: right;
+    width: 75%;
+}
+
+
+
+}
+
+@media only screen and (min-device-width : 1200px){
+
+.googlesearch {
+    width: 30%;
+}
+
+.banner, .content  {
+    width: 50%;
+    margin: 15px auto;
+}
+
+}
