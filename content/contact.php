@@ -16,7 +16,7 @@
 
 <body>
 
-    <div class="grid-container">
+    <div class="grid_container">
 
         <nav>
             <a href="../index.html">Home</a>
@@ -51,15 +51,16 @@
             <img src="../images/banner.gif" alt="Persönliche Beratung">
         </div>
 
-        <div class="content">            
+        <div class="content contact_wrapper">            
             <?php
             $action=$_REQUEST['action'];
             if ($action=="")    
                 {
                 ?>
-                <p class="error">Felder mit einem * müssen ausgefüllt werden!</p>
-
-                <form class="contact_form" action="" method="POST" enctype="multipart/form-data">
+                <p class="error">Felder mit einem * müssen ausgefüllt werden!</p><br>
+                <div class="contact_form">
+                
+                <form action="" method="POST" enctype="multipart/form-data">                
                 <input type="hidden" name="action" value="submit">
                 
                 Vollständiger Name:<span class="error">*</span><br>
@@ -72,10 +73,11 @@
                 <input name="telnr" type="text" value="" size="30"/><br>
                 
                 Anliegen:<span class="error">*</span><br>
-                <textarea name="message" rows="7" cols="25"></textarea><br>
+                <textarea name="message" rows="10" cols="30"></textarea><br>
                 <input type="submit" value="Absenden"/>
                 
                 </form>
+                </div>
                 <?php
                 } 
             else                

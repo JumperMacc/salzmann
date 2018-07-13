@@ -7,27 +7,44 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
-.searchbar { grid-area: search; }
-.banner { grid-area: banner; }
-.content { grid-area: content; }
-.footer { grid-area: footer; }
-
-.grid-container {
+.grid_container {
+    display: -ms-grid;
     display: grid;
-    grid-template-areas:
-        'nav'
-        'header'
-        'search'
-        'banner'
-        'content'
-        'footer';
-    grid-template-rows: 
-        40px    /*nav*/
-        100px   /*header*/
-        auto    /*search*/
-        auto    /*banner*/
-        1fr     /*content*/
-        100px   /*footer*/
+    grid-gap: 0;
+    -ms-grid-columns: 100%;
+    -ms-grid-rows: 40px 100px 45px auto auto 100px;
+    grid-template-rows: 40px 100px 45px auto auto 100px;
+
+}
+
+nav {
+    -ms-grid-row: 1;
+    grid-row: 1;
+}
+
+header {
+    -ms-grid-row: 2;
+    grid-row: 2;
+}
+
+.searchbar {
+    -ms-grid-row: 3;
+    grid-row: 3;
+}
+
+.banner {
+    -ms-grid-row: 4;
+    grid-row: 4;
+}
+
+.content {
+    -ms-grid-row: 5;
+    grid-row: 5;
+}
+
+footer{
+    -ms-grid-row: 6;
+    grid-row: 6;
 }
 
 p {
@@ -84,9 +101,9 @@ nav a{
     padding: 5px !important;
 }
 
-.portrait, .pdf {
+.portrait {
     display: block;
-    height: auto;
+    height: 235px;
     width: 200px;
     margin: 15px auto;
 }
@@ -113,13 +130,19 @@ footer {
     color: rgb(179, 0, 0);
 }
 
+
 .contact_form {
-    padding: 15px;
     margin: 15px;
     border-radius: 15px;
     background-image: url(../images/contact_background.gif);
     background-repeat:no-repeat;
     background-size:cover;    
+}
+
+.contact_form form{
+    padding: 15px 0;
+    width: 300px;
+    margin: auto;
 }
 
 input[type=submit] {
@@ -130,6 +153,14 @@ input[type=submit] {
     border: 1px solid black;
     cursor:pointer;
 }
+
+.pdf {
+    display: block;
+    height: auto;
+    width: 200px;
+    margin: 15px auto;
+}
+
 
 figcaption {
     text-align: center;
@@ -155,16 +186,6 @@ address {
 }
 
 @media only screen and (min-device-width : 600px){
-
-.grid-container {
-    grid-template-rows: 
-        40px    /*nav*/
-        100px   /*header*/
-        auto    /*search*/
-        auto   /*banner*/
-        1fr     /*content*/
-        100px   /*footer*/
-}
 
 .googlesearch {
     width: 50%;
@@ -202,7 +223,8 @@ address {
 .portrait {
     box-sizing: border-box;
     float: left;
-    width: 22%;
+    height: 155px; 
+    width: 130px;
     margin: 0;
 }
 
