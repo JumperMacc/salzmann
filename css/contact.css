@@ -1,0 +1,119 @@
+/* Below line is used for online Google font */
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+body {
+    margin: 0;
+}
+
+
+nav {
+    background-color: #E6E6E6;
+}
+
+
+nav a{
+    display: inline-block;
+    text-decoration: none;
+    color: #676767;
+    line-height: 20px;
+    padding: 10px;
+}
+
+
+.active{
+    color: #005B9B;
+}
+
+
+h2{
+background: linear-gradient(#B2DAF6 5%, #ffffff 100%);
+padding: 15px 15px 25px;
+margin: -10px -25px;
+text-align: center;
+border-radius: 10px 10px 0 0;
+}
+
+
+.error{
+color:red;
+}
+
+.success{
+color: green;
+}
+
+div.container{
+width: 280px;
+height: 400px;
+margin: 35px auto;
+font-family: 'Raleway', sans-serif;
+}
+
+div.main{
+width: 230px;
+padding: 10px 25px 30px;
+border: 2px solid gray;
+border-radius: 10px;
+float:left;
+}
+
+input[type=tel],input[type=email],input[type=text],textarea{
+width: 97.7%;
+height: 34px;
+padding-left: 5px;
+margin-bottom: 5px;
+margin-top: 5px;
+border: 2px solid #ccc;
+color: #4f4f4f;
+font-size: 16px;
+border-radius: 5px;
+}
+
+textarea{
+resize:none;
+height:80px;
+}
+
+label{
+color: #464646;
+text-shadow: 0 1px 0 #fff;
+font-size: 14px;
+font-weight: bold;
+}
+
+.submit{
+padding: 10px;
+text-align: center;
+font-size: 18px;
+background: linear-gradient(#0085E2 5%, #B2DAF6 100%);
+border: 2px solid #0085E2;
+color: #ffffff;
+font-weight: bold;
+cursor: pointer;
+text-shadow: 0px 1px 0px #014372;
+width: 100%;
+border-radius: 5px;
+}
+
+.submit:hover{
+background: linear-gradient(#B2DAF6 5%, #0085E2 100%);
+}
+
+
+@media only screen and (min-device-width : 480px){
+
+h2{
+margin: -10px -50px;
+}
+
+div.container{
+width: 454px;
+height: 610px;
+}
+
+div.main{
+width: 350px;
+padding: 10px 50px 30px;
+}
+
+}
